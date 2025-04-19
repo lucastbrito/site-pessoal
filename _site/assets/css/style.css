@@ -1,0 +1,221 @@
+/* 0. CONFIGURAÇÕES INICIAIS*/
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #1E1E1E;
+    padding-top: 60px 0 0 0; /* Garante que o conteúdo não fique escondido sob o cabeçalho */
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #1E1E1E;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* 1. CABEÇALHO FIXO */
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff; /* Keep white background */
+    color: #1E1E1E; /* Black text */
+    padding: 8px 0; /* Reduce vertical padding */
+    z-index: 1000;
+    box-shadow: none; /* Remove shadow */
+    min-height: 45px; /* Set a specific, shorter height */
+    display: flex;
+    align-items: center; /* Keep content centered vertically */
+    justify-content: center;
+}
+
+/* 1.1. Wrapper para alinhar elementos */
+.header-wrapper,
+.text-image-wrapper {
+    flex-wrap: wrap;
+}
+
+.header-wrapper {
+    width: 90%;
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+/* 1.1.1. Estiliza o título do site */
+.site-title {
+    font-family: 'EB Garamond', serif;
+    font-weight: 800; /* Extra bold */
+    font-size: 28px;
+    text-decoration: none;
+    color: #1E1E1E;
+}
+
+/* 1.1.2. Estiliza o menu */
+.site-nav {
+    margin-left: auto; /* Forces the menu to the right */
+}
+
+.site-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px; /* Espaçamento entre os itens do menu */
+}
+
+.site-nav ul.open {
+    max-height: 500px;
+    opacity: 1;
+}
+
+/* 1.1.2.1. Estiliza os links do menu */
+.site-nav a {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600; /* Slightly bold for readability */
+    color: #1E1E1E;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 0;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* 1.1.2.1.1 Efeito hover: fundo preto e texto branco */
+.site-nav a:hover {
+    background-color: #1E1E1E;
+    color: #ffffff;
+    border-radius: 0;
+}
+
+/*1.1.2.2. Fazer menu recolhido para celulares*/
+
+/* botão só visível em telas pequenas */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #1E1E1E;
+  }
+
+/* 2. PÁGINA DE CONTEÚDO */
+.content-box {
+    max-width: 800px; /* Fixed width for a readable layout */
+    margin: 80px auto; /* Keeps spacing from top (header) and bottom */
+    padding: 30px; /* Adds spacing inside */
+    background-color: #FAE3C6; /* Eggshell color (similar to Polén paper) */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    border-radius: 5px; /* Optional: Remove if you want sharp edges */
+    min-height: calc(100vh - 160px); /* Ensures it extends to the bottom */
+}
+
+.content-wrapper {
+    width: 90%;
+    max-width: 800px;
+    margin: 80px auto 40px; /* Keeps spacing from top and bottom */
+    padding: 30px;
+    background-color: #FAE3C6; /* Polén Paper-like background */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    min-height: calc(100vh - 160px);
+}
+
+/* 2.1. CONTAINER */
+.page-container {
+    min-height: calc(100vh - 60px); /* Header height subtracted */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*2.1.1. ELEMENTOS DO TEXTO*/
+h1, h2, h3, h4 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+/*Mudanças para CV*/
+.cv h2 {
+    text-align: center;
+}
+
+.author-name {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600; /* Bold but not too heavy */
+    font-size: 14px;
+    color: #444;
+    text-transform: uppercase; /* Adds structure */
+    letter-spacing: 1px; /* Improves readability */
+}
+
+a, a:visited {
+    color: #1E1E1E; /* Set this to your desired link color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .content-box,
+    .content-wrapper {
+      width: 95%;
+      padding: 20px;
+      margin: 60px auto 30px;
+    }
+  
+    h1, h2, h3 {
+      font-size: clamp(1.25rem, 4vw, 1.75rem);
+    }
+  
+    .page-container {
+      padding: 0 1rem;
+    }
+  
+    .site-header {
+        padding: 4px 0;
+        min-height: 40px;
+    }
+
+    .header-wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+  
+    .site-title {
+      font-size: 20px;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .site-nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        gap: 10px;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.3s ease;
+      }
+    
+      .site-nav ul.open {
+        max-height: 500px;
+        opacity: 1;
+        display: flex;
+      }
+}  

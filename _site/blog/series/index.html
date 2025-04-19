@@ -1,0 +1,88 @@
+<head>
+    <link rel="stylesheet" href="/assets/css/style.css"> <!-- Main stylesheet -->
+    <link rel="stylesheet" href="/assets/css/special-style.css"> <!-- Specific stylesheet for the blog page-->
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;800&family=IBM+Plex+Mono:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> <!-- Fonts import from Google Fonts -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="">
+    <header class="site-header">
+    <div class="header-wrapper"> <!-- Wrapper for the header -->
+        <a class="site-title" href="/">Lucas Tavares Brito</a>
+
+        <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+
+        <nav class="site-nav">
+            <ul id="menu-list">
+                <li><a href="/cv/">Currículo</a></li>
+                <li><a href="/portfolio/">Portfólio e Projetos</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="https://www.beatca.com">Beat CA</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    <div class="page-container">
+    <div class="content-wrapper">
+        
+        <div class="text-image-wrapper">
+    <div class="image-block">
+        <img src="/assets/images/lamparina.jpg" alt="Foto do autor" />
+    </div>
+    <div class="text-block">
+        <h1>Ciência social, literatura, registros...</h1>
+        
+        <p>Aqui tem de tudo! O objetivo principal é dar vazão àquilo que gosto de escrever, mas sinta-se à vontade para explorar o que há por aqui. É possível navegar por meio das categorias abaixo para acessar textos.</p>
+        
+        <div class="post-menu">
+            | <a href="/blog/recentes/" class="filter-btn ">RECENTES</a>
+            | <a href="/blog/historico/" class="filter-btn ">HISTÓRICO</a>
+            | <a href="/blog/series/" class="filter-btn active">SÉRIES</a> |
+        </div>
+    </div>
+</div>
+
+<ul>
+    
+        
+    
+        
+    
+        
+    
+        
+            <li><a href="/blog/series/enciclopedia-cs/">Enciclopédia das Ciências Sociais</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            <li><a href="/blog/series/ppgcp-usp/">Leituras - Processo Seletivo PPGCP USP 2025</a></li>
+        
+    
+        
+    
+        
+    
+        
+    
+</ul>
+
+    </div>
+</div>
+
+    <script>
+        window.onload = () => {
+          const toggleButton = document.querySelector('.menu-toggle');
+          const menuList = document.getElementById('menu-list');
+      
+          toggleButton.addEventListener('click', () => {
+            menuList.classList.toggle('open');
+          });
+        };
+    </script>      
+</body>

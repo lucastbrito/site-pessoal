@@ -1,0 +1,57 @@
+<head>
+    <link rel="stylesheet" href="/assets/css/style.css"> <!-- Main stylesheet -->
+    <link rel="stylesheet" href="/assets/css/special-style.css"> <!-- Specific stylesheet for the blog page-->
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;800&family=IBM+Plex+Mono:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> <!-- Fonts import from Google Fonts -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="">
+    <header class="site-header">
+    <div class="header-wrapper"> <!-- Wrapper for the header -->
+        <a class="site-title" href="/">Lucas Tavares Brito</a>
+
+        <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+
+        <nav class="site-nav">
+            <ul id="menu-list">
+                <li><a href="/cv/">Currículo</a></li>
+                <li><a href="/portfolio/">Portfólio e Projetos</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="https://www.beatca.com">Beat CA</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    <div class="page-container">
+    <div class="content-wrapper">
+        
+            <h1 class="page-title">Portfólio e Projetos</h1>
+        
+        <p>Para além do trabalho em horário comercial, estou sempre metido em algum projeto que em geral não tem nada a ver com minha área de atuação de fato (se é que tenho uma) - acho importante colocar essas coias por aqui, a quem interessar possa.</p>
+
+<h2 id="análise-dos-efeitos-do-capital-social-sobre-saúde-no-brasil-2025-em-curso">Análise dos efeitos do capital social sobre saúde no Brasil (2025, em curso)</h2>
+
+<h2 id="esse-site-2025">Esse site! (2025)</h2>
+
+<h2 id="formulário-para-experimento-musical-doutorado-em-economia-da-cultura-2025">Formulário para experimento musical, doutorado em economia da cultura (2025)</h2>
+
+<h2 id="estruturação-da-comunicação-interna-do-multilab-2025">Estruturação da comunicação interna do Multilab (2025)</h2>
+
+<h2 id="avaliação-dos-impactos-econômicos-do-carnaval-2024">Avaliação dos impactos econômicos do carnaval (2024)</h2>
+
+<h2 id="análise-dos-determinantes-das-redes-sociais-no-brasil-2024">Análise dos determinantes das redes sociais no Brasil (2024)</h2>
+
+    </div>
+</div>
+
+    <script>
+        window.onload = () => {
+          const toggleButton = document.querySelector('.menu-toggle');
+          const menuList = document.getElementById('menu-list');
+      
+          toggleButton.addEventListener('click', () => {
+            menuList.classList.toggle('open');
+          });
+        };
+    </script>      
+</body>
