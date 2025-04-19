@@ -168,8 +168,8 @@ a:hover {
 @media (max-width: 768px) {
     .content-box,
     .content-wrapper {
-      width: 95%;
-      padding: 20px;
+      width: 100%;
+      padding: 20px 15px;
       margin: 60px auto 30px;
     }
   
