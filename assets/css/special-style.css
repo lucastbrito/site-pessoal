@@ -1,0 +1,60 @@
+.text-image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-direction: row; /* Ensures image is first (left), text second (right) */
+}
+
+.image-block {
+    flex-shrink: 0; /* Prevents it from shrinking */
+}
+
+.text-block {
+    flex: 1; /* Takes remaining space */
+}
+
+.image-block img {
+    width: 300px; /* Adjust if necessary */
+    height: auto;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .text-image-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-block {
+        order: 0; /* Reset order so it stacks properly */
+    }
+
+    .image-block img {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+.post-menu {
+    font-size: 12px; /* Mimics <font size="-2"> */
+    text-align: center; /* Centers the menu */
+    margin-top: 10px;
+}
+
+.post-menu a {
+    text-decoration: none;
+    color: #1E1E1E; /* Link color */
+    font-weight: bold;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+.post-menu a:hover {
+    text-decoration: underline;
+}
+
+.post-menu a.active {
+    background: #1E1E1E;
+    color: white;
+}
